@@ -140,6 +140,7 @@ static PyObject* module_enable_shared_cache(PyObject* self, PyObject* args, PyOb
         return NULL;
     }
 
+    /* sqlite3_enable_shared_cache has been removed in hctree
     rc = sqlite3_enable_shared_cache(do_enable);
 
     if (rc != SQLITE_OK) {
@@ -148,6 +149,9 @@ static PyObject* module_enable_shared_cache(PyObject* self, PyObject* args, PyOb
     } else {
         Py_RETURN_NONE;
     }
+    */
+
+    Py_RETURN_NONE;
 }
 
 PyDoc_STRVAR(module_enable_shared_cache_doc,
